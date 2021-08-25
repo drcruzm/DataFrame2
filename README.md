@@ -69,10 +69,13 @@ plot_boxplot(clima, by="yr")
 ## plot
 
 <https://www.datamentor.io/r-programming/plot-function/>
+<https://r-coder.com/plot-r/#Plot_line_type>
+<https://bookdown.org/yihui/rmarkdown/pdf-document.html>
 
 ``` r
 month<-factor(month)
-plot(month,upper, xlab="Mes del Año", ylab="mm de lluvia" )
+plot(month,upper, xlab="Mes del Año", ylab="mm de lluvia")
+text(7, 11, "Maximo")
 ```
 
 ![](README_files/figure-gfm/upper%20vs%20mes-1.png)<!-- -->
