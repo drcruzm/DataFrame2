@@ -7,10 +7,17 @@ Manejo DataFrames 2
 setwd("~/AMV-21/Clase 2/DataFrame2")
 ```
 
+## Llamado de Librerias
+
+``` r
+library(UsingR)
+library(DataExplorer)
+```
+
 ## Leyendo los datos
 
 ``` r
-clima <- read.table("https://drvcruz.s3.us-east-2.amazonaws.com/SilwoodWeather.txt",header = T)
+clima <- read.table("https://drvcruz.s3.us-east-2.amazonaws.com/SilwoodWeather.txt", header = T)
 ```
 
 ## Conociendo los datos
@@ -44,3 +51,36 @@ str(clima)
     ##  $ rain : num  12.2 1.3 0.1 1.1 3.5 0.1 0 0 0 0 ...
     ##  $ month: int  1 1 1 1 1 1 1 1 1 1 ...
     ##  $ yr   : int  1987 1987 1987 1987 1987 1987 1987 1987 1987 1987 ...
+
+## Factor Analisis
+
+``` r
+plot_boxplot(clima, by="month")
+```
+
+![](README_files/figure-gfm/boxplot%20mes-1.png)<!-- -->
+
+``` r
+plot_boxplot(clima, by="yr")
+```
+
+![](README_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
+
+## plot
+
+<https://www.datamentor.io/r-programming/plot-function/>
+
+``` r
+month<-factor(month)
+plot(month,upper, xlab="Mes del Año", ylab="mm de lluvia" )
+```
+
+![](README_files/figure-gfm/upper%20vs%20mes-1.png)<!-- -->
+
+``` r
+data(homeprice)
+plot(homeprice$sale,homeprice$list)
+abline(lm(homeprice$list~homeprice$sale), col="red")
+```
+
+![](README_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->

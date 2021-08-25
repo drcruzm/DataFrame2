@@ -13,6 +13,13 @@ knitr::opts_chunk$set(message = FALSE, warning = FALSE, echo = TRUE)
 setwd("~/AMV-21/Clase 2/DataFrame2")
 ```
 
+## Llamado de Librerias
+
+```{r}
+library(UsingR)
+library(DataExplorer)
+```
+
 ## Leyendo los datos
 
 ```{r}
@@ -21,7 +28,7 @@ clima <- read.table("https://drvcruz.s3.us-east-2.amazonaws.com/SilwoodWeather.t
 
 ## Conociendo los datos
 
-```{r Datos}
+```{r Datos, message=FALSE}
 names(clima)
 attach(clima)
 head(clima)
@@ -30,7 +37,30 @@ str(clima)
 
 ## Factor Analisis 
 
-```{r}
-month<-factor(month)
+```{r boxplot mes, message=FALSE, warning=FALSE}
+plot_boxplot(clima, by="month")
 ```
 
+
+```{r}
+plot_boxplot(clima, by="yr")
+```
+
+
+## plot
+<https://www.datamentor.io/r-programming/plot-function/>
+
+```{r upper vs mes}
+month<-factor(month)
+plot(month,upper, xlab="Mes del Año", ylab="mm de lluvia" )
+
+
+```
+
+
+```{r}
+data(homeprice)
+plot(homeprice$sale,homeprice$list)
+abline(lm(homeprice$list~homeprice$sale), col="red")
+
+```
