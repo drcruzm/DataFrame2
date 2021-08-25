@@ -85,7 +85,7 @@ plot(clima$upper,clima$lower)
 abline(lm(clima$lower~clima$upper), col="red")
 ```
 
-![](README_files/figure-gfm/unnamed-chunk-7-1.png)<!-- -->
+![](README_files/figure-gfm/linea%20clima-1.png)<!-- -->
 
 ``` r
 regresion <- lm(clima$lower~clima$upper)
@@ -106,4 +106,4 @@ plot(homeprice$sale,homeprice$list)
 abline(lm(homeprice$list~homeprice$sale), col="red")
 ```
 
-![](README_files/figure-gfm/unnamed-chunk-6-1.png)<!-- -->
+![](README_files/figure-gfm/lineal-1.png)<!-- -->
