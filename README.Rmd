@@ -59,7 +59,12 @@ month<-factor(month)
 plot(month,upper, xlab="Mes del Año", ylab="mm de lluvia")
 text(7, 11, "Maximo")
 ```
+```{r}
 
+plot(clima$upper,clima$lower)
+abline(lm(clima$upper~clima$lower), col="red")
+
+```
 
 ```{r}
 data(homeprice)
