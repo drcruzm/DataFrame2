@@ -7,9 +7,30 @@ output: github_document
 knitr::opts_chunk$set(message = FALSE, warning = FALSE, echo = TRUE)
 ```
 
-## 
+## Working Directory
 
 ```{r}
 setwd("~/AMV-21/Clase 2/DataFrame2")
+```
+
+## Leyendo los datos
+
+```{r}
+clima <- read.table("https://drvcruz.s3.us-east-2.amazonaws.com/SilwoodWeather.txt", header = T)
+```
+
+## Conociendo los datos
+
+```{r Datos}
+names(clima)
+attach(clima)
+head(clima)
+str(clima)
+```
+
+## Factor Analisis 
+
+```{r}
+month<-factor(month)
 ```
 
