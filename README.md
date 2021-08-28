@@ -1,6 +1,8 @@
 Manejo DataFrames 2
 ================
 
+**REGRESAR AL HOME** : [https://analisismultivariado.com/](https://analisismultivariado.com) 
+
 ## Working Directory setting
 
 ``` r
@@ -99,6 +101,9 @@ regresion
     ## Coefficients:
     ## (Intercept)  clima$upper  
     ##     -3.6436       0.6503
+
+**REGRESAR AL HOME** : [https://analisismultivariado.com/](https://analisismultivariado.com) 
+
 
 ``` r
 data(homeprice)
